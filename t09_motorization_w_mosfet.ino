@@ -1,5 +1,5 @@
 const int motorPin = 9;
-const int switchPin = 2;
+const int switchPin = 7;
 int switchState = 0;
 
 void setup() {
