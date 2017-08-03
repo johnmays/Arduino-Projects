@@ -28,9 +28,9 @@ void loop(){
   int switchState = digitalRead(switchPin);
   if(switchState != 0){
       int potValue = analogRead(potPin);
-      potValue = map(potValue, 0, 1023, 262, 349);
-      Serial.println(potValue);
-      tone(piezoPin, potValue);
+      int pitch = map(potValue, 0, 1023, 50, 4000);
+      Serial.println(pitch);
+      tone(piezoPin, pitch, 20);
   }
   
 }
